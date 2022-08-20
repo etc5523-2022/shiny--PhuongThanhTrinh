@@ -81,6 +81,13 @@ server <- function(input, output) {
     glue("{input$country} accounts for {prop}% of ramen manufacturers internationally.")
   })
 
+  output$top10 <- renderPlot({
+    ggplot(top10, aes(x = average_rate, y = brand, color = brand)) +
+      geom_bar(stat = "identity", fill = "orange") +
+      labs(x = "Average rate", y = "Brand") +
+      ggtitle("Top 10 highest rated ramen brands") +
+      theme_classic()
+  })
 }
 
 shinyApp(ui = ui, server = server)
