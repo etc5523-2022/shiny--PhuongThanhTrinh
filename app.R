@@ -48,7 +48,10 @@ ui <- fluidPage(
     mainPanel(
       plotOutput("map"),
       textOutput("proportion")
-    )
+    ),
+  h3("2. What are the top 10 the highest average rated kinds of ramen?"),
+
+  plotOutput("top10")
   )
 )
 
