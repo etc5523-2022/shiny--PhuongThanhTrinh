@@ -39,6 +39,7 @@ styles <- unique(ramen_ratings$style)
 
 ui <- fluidPage(
   titlePanel("Ramen Reviews"),
+
   h3("1. How are ramen manufacturer distributed across countries?"),
   sidebarLayout(
     sidebarPanel(
@@ -49,10 +50,22 @@ ui <- fluidPage(
       plotOutput("map"),
       textOutput("proportion")
     ),
+
   h3("2. What are the top 10 the highest average rated kinds of ramen?"),
 
   plotOutput("top10")
+  ),
+
+  h3("3. Is there any correlation between the style of ramen and the associated rate?"),
+  sidebarLayout(
+    sidebarPanel(
+      radioButtons(
+        "style", "Select a style",
+        choices = styles)),
+    mainPanel(
+      plotlyOutput("ramenstyle"))
   )
+
 )
 
 
