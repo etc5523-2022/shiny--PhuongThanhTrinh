@@ -72,7 +72,7 @@ ui <- fluidPage(
 
 
 
-server <- function(input, output) {
+server <- function(input, output){
 
   output$map <- renderPlot({
     ggplot(ramen_distribution) +
@@ -101,6 +101,36 @@ server <- function(input, output) {
       ggtitle("Top 10 highest rated ramen brands") +
       theme_classic()
   })
+
+  out <- reactive({
+    if (styles != "NA"){
+      renderPlotly({
+        g <- ggplot(plot, aes(x = average_rate, y = brand)) +
+          geom_col() +
+          labs(x = "Average rate", y = "Brand")
+        ggplotly(g)
+      })
+    }
+  })
+
+  output$ramenstyle <- renderPlotly({
+    g <- ggplot(plot, aes(x = average_rate, y = brand)) +
+      geom_col() +
+      labs(x = "Average rate", y = "Brand")
+    ggplotly(g)
+  })
 }
+
+top10 <- ramen_ratings %>%
+  group_by(brand) %>%
+  summarise(average_rate = mean(stars)) %>%
+  arrange(-average_rate) %>%
+  head(10)
+
+plot <- ramen_ratings %>%
+  group_by(brand, style) %>%
+  summarise(average_rate = mean(stars)) %>%
+  arrange(-average_rate) %>%
+  head(10)
 
 shinyApp(ui = ui, server = server)
