@@ -1,26 +1,38 @@
 
 #### Data
 
-This data shows the waiting time between eruptions
-and the duration of the eruption for the Old Faithful
-geyser in Yellowstone National Park, Wyoming, USA.
-The data source is from Azzalini & Bowman (1990) 
-*"A look at some data on the Old Faithful geyser." Applied Statistics*, 39, 357–365.
+This data includes over 3,100 ratings on different types of ramen around the world. The dataset contains 6 variables, including 2 numeric variables:
+
+- review_number: Ramen review number
+
+- stars: Rating of the ramen, 5 is best, 0 is worst
+
+and 4 categorical variables:
+
+- brand: Brand of the ramen
+
+- variety: The ramen variety, e.g., a flavor, style, ingredient
+
+- style: Style of container (cup, pack, tray)
+
+- country: Origin country of the ramen brand
+
+The data is collected from the [Ramen Rater](https://www.theramenrater.com/resources-2/the-list/). 
 
 
 #### Purpose
 
 The purpose of the app is to:
 
-1. show how the number of bins in a histogram reveals/hides the bimodality in the data,
-2. show how the different plot choices make certain features of data more striking, and 
-3. interactively estimate the best parameters for the mixture of two normal distributions to the data. 
+1. show an overview of how ramen is distributed across selected countries,
+2. show what are the highest rated ramen brands and how different ramen styles can affect raters' preference towards particular brands, and 
+3. allow users to freely explore in details and understand about a variety of ramen brands, including the review, country of origin, etc. 
 
-The data showed obvious signs of bimodality (both in the marginal and joint distribution). The app used interactive components to see how the choices in plot elements (e.g. number of bins and plot types) effect the visibility of these features. The last part used an interactive approach for a user to decide the model parameters that fit the data. 
+The first part indicates majority of ramen distribution are located in Asian countries, namely South Korea, Japan, Indonesia and China. The second part provided a feature to let users learn more about the origin of various ramen varieties around the wold. The app also utilized interactive components to show the changes in ramen ratings in response to different styles (e.g. world map and interactive graphs).
 
 #### Creator
 
-Emi Tanaka (emi.tanaka@monash.edu)
+Phuong Thanh Trinh (ptri0004@student.monash.edu)
 
 <details>
 <summary>Session information</summary>
