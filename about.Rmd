@@ -24,11 +24,11 @@ The data is collected from the [Ramen Rater](https://www.theramenrater.com/resou
 
 The purpose of the app is to:
 
-1. show an overview of how ramen is distributed across selected countries,
+1. show an overview of how ramen varieties are distributed across selected countries,
 2. show what are the highest rated ramen brands and how different ramen styles can affect raters' preference towards particular brands, and 
-3. allow users to freely explore in details and understand about a variety of ramen brands, including the review, country of origin, etc. 
+3. allow users to freely explore in details and understand about different ramen brands, including the reviews, country of origin, etc. 
 
-The first part indicates majority of ramen distribution are located in Asian countries, namely South Korea, Japan, Indonesia and China. The second part provided a feature to let users learn more about the origin of various ramen varieties around the wold. The app also utilized interactive components to show the changes in ramen ratings in response to different styles (e.g. world map and interactive graphs).
+The first part indicates that  majority of ramen distribution are located in Asian countries, namely South Korea, Japan, Indonesia and Thailand. The second part provided a feature to let users learn more about the origin of various ramen varieties and how they are rated based on reviewers around the wold. From the last part, it can be seen that the most poular ramen styles that are highly preferred are bowl and pack. The app also utilized interactive components to show the changes in ramen ratings in response to different locations and different styles (e.g. world map and interactive graphs).
 
 #### Creator
 

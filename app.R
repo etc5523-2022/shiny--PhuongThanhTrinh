@@ -35,7 +35,7 @@ ui <- fluidPage(
 titlePanel(title=div(img(src="ramen.jpg", height = 150, weight = 150, style="display: block; margin-left: auto; margin-right: auto;"))),
   titlePanel(div("Ramen Rating", style="text-align: center;")),
 
-  h3("1. How are ramen manufacturer distributed across selected countries?"),
+  h3("1. How are ramen varieties distributed across selected countries?"),
   sidebarLayout(
     sidebarPanel(
       selectInput("country", "Choose a country",
@@ -108,7 +108,7 @@ server <- function(input, output){
       pull(prop) %>%
       round(digits = 2)
 
-   glue("{input$country} accounts for {prop}% of ramen manufacturers internationally.")
+   glue("{input$country} accounts for {prop}% of ramen distribution internationally.")
   })
 
   output$top10 <- renderPlot({
